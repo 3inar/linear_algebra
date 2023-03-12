@@ -25,3 +25,8 @@ e3 = basis[3] - inner(basis[3], e2)*e2 - inner(basis[3], e1)*e1
 e3 = e3/norm(e3)
 
 orthonormal_basis = [e1, e2, e3]
+
+println("Orthonormal basis for P_2(R):")
+println(orthonormal_basis[1])
+println(orthonormal_basis[2])
+println(orthonormal_basis[3])
