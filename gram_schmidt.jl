@@ -30,3 +30,15 @@ println("Orthonormal basis for P_2(R):")
 println(orthonormal_basis[1])
 println(orthonormal_basis[2])
 println(orthonormal_basis[3])
+
+
+# Riesz representation Theorem: given a linear functional phi there is a unique
+# vector q such that phi(p) = <p, q> for all p, <> being the inner product.
+# We can find q easily using an orthonormal basis
+
+function phi(p)
+  integrate(p*cos(pi*x), (x, 0, 1))
+end
+
+q = phi(e1)*e1 + phi(e2)*e2 + phi(e3)*e3
+
